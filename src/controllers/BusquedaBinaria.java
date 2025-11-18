@@ -2,18 +2,18 @@ package controllers;
 
 public class BusquedaBinaria {
     public Integer busquedaBinaria(int[] numeros, int valor){
-        int izquierda = 0;
-        int derecha = numeros.length - 1;
+        int iz = 0;
+        int der = numeros.length - 1;
 
-        while (izquierda <= derecha){
-            int medio = izquierda + (derecha - izquierda)/2;
+        while (iz <= der){
+            int medio = iz + (der - iz)/2;
             if (numeros[medio] == valor){
                 return medio;
             }
             if (numeros[medio] < valor){
-                izquierda = medio + 1;
+                iz = medio + 1;
             } else {
-                derecha = medio - 1;
+                der = medio - 1;
             }
             
         }

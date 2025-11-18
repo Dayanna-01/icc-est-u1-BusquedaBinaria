@@ -16,20 +16,20 @@ public class PersonaController {
         }
 
         
-        int izquierda = 0;
-        int derecha = personas.length - 1;
+        int iz = 0;
+        int der = personas.length - 1;
 
-        while (izquierda <= derecha) {
-            int medio = izquierda + (derecha - izquierda) / 2;
+        while (iz <= der) {
+            int medio = iz + (der - iz) / 2;
             int comparacion = personas[medio].getNombre().compareTo(nombre);
 
             if (comparacion == 0) {
                 return personas[medio]; 
             }
             if (comparacion < 0) {
-                izquierda = medio + 1;
+                iz = medio + 1;
             } else {
-                derecha = medio - 1;
+                der = medio - 1;
             }
         }
         return null; 

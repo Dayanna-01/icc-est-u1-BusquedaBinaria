@@ -6,12 +6,13 @@ import views.ShowConsole;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Dayanna Chacha");
-        PersonaController pC = new PersonaController();
-        ShowConsole sC = new ShowConsole();
-        BusquedaBinaria bB = new BusquedaBinaria();
-        int [] numeros = new int[]{10, 2, 4, 6,7,8,13,20};
-        Integer resultado = bB.busquedaBinaria(numeros, 13);
-        sC.showResult(resultado, 10);
+        PersonaController personaController = new PersonaController();
+        ShowConsole showConsole = new ShowConsole();
+        BusquedaBinaria busquedaBinaria = new BusquedaBinaria();
+
+        int [] num = new int[]{10, 2, 4, 6,7,8,13,20};
+        Integer resultado = busquedaBinaria.busquedaBinaria(num, 13);
+        showConsole.showResult(resultado, 10);
 
         Persona[] people = new Persona[]{
             new Persona("Juan", 25),
@@ -23,8 +24,8 @@ public class App {
             new Persona("Sofia", 24)
         };
 
-        Persona encontPersona = pC.findByName(people, "Pedro");
-        sC.showResult(encontPersona, "Pedro");
+        Persona encontPersona = personaController.findByName(people, "Pedro");
+        showConsole.showResult(encontPersona, "Pedro");
 
 
     }
