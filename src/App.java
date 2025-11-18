@@ -10,7 +10,7 @@ public class App {
         ShowConsole showConsole = new ShowConsole();
         BusquedaBinaria busquedaBinaria = new BusquedaBinaria();
 
-        int [] num = new int[]{10, 15, 25, 8, 5, 7, 9};
+        int [] num = new int[]{15, 25, 8, 10, 5, 7, 9};
         Integer resultado = busquedaBinaria.busquedaBinaria(num, 10);
         showConsole.showResult(resultado, 10);
 
